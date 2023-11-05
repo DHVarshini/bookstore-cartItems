@@ -1,0 +1,10 @@
+<div class="card" style="width: 15rem">
+    <img [src]="book?.image" class="card-img-top img-fluid" alt="book cover"/>
+    <div class="card-body">
+      <h5 class="card-title">{{ book?.title | slice : 0 : 20 }}</h5>
+      <p class="card-text">{{ book?.author | slice : 0 : 20 }}       
+      </p>
+      <button (click)="addToCart(book!)" class="btn btn-primary">Add to Cart
+      </button>
+    </div>
+  </div>

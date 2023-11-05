@@ -1,0 +1,29 @@
+<li
+class="list-group-item d-flex justify-content-between align-items-start"
+>
+<div class="ms-2 me-auto">
+    <table>
+        <tr>
+            <th style="width: 8vw;">Book</th>
+            <th style="width: 8vw;">Price</th>
+            <th style="width: 8vw;">Count</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="d-flex" style="width: 8vw;">{{item?.bookData?.title}}</div>
+            </td>
+            <td style="width: 8vw;">{{item?.bookData?.price?.value}} EUR</td>
+            <td><div class="me-2  bg-light">
+                <button (click)="minus(item?.bookData?.ISBN!)">-</button>
+                <span> {{item?.count}} </span>
+                <button (click)="plus(item?.bookData?.ISBN!)">+</button>
+                </div>
+            </td>
+            <td>
+                <button class="badge bg-primary rounded-pill" (click)="removeBook(item?.bookData?.ISBN!)">X</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</li>
